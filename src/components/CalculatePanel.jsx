@@ -2,17 +2,23 @@ import UnitInputPanel from "./UnitInputPanel"
 import ResultPanel from "./ResultPanel"
 import { useState } from "react";
 
-const defaultState = {
-    "value": 0,
-    "unit": ""
+const defaultHeightState = {
+    "value": "",
+    "unit": "cm"
 };
+
+const defaultWeightState =
+{
+    "value": "",
+    "unit": "kg"
+}
 
 export default function CalculatePanel() {
 
 
 
-    const [weight, setWeight] = useState(defaultState);
-    const [height, setHeight] = useState(defaultState);
+    const [weight, setWeight] = useState(defaultWeightState);
+    const [height, setHeight] = useState(defaultHeightState);
 
     let isInputGiven = false;
     if (weight.value > 0 && height.value > 0 && weight.unit && height.unit) {
