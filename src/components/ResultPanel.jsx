@@ -1,5 +1,11 @@
+import BMIChart from "./BMIChart";
+
 export default function ({ bmi }) {
     return (
-        < p > {bmi}</p >
+        <>
+            < p > Your BMI is: {bmi} </p >
+            <BMIChart bmi={0} />
+        </>
+
     );
 }
