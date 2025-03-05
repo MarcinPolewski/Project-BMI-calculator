@@ -1,0 +1,12 @@
+html {
+    font-family: 'Roboto Slab', sans-serif;
+    color: white;
+}
+
+body {
+    background: radial-gradient(circle at top,
+            #d3d3d3fa,
+            rgba(2, 2, 2, 0.87));
+    background-repeat: repeat;
+    background-size: 100% 100%;
+}

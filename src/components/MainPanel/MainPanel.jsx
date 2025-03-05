@@ -1,6 +1,8 @@
-import UnitInputPanel from "./UnitInputPanel"
-import ResultPanel from "./ResultPanel"
+import UnitInputPanel from "../UserInputPanel/UnitInputPanel"
+import ResultPanel from "../ResultPanel/ResultPanel"
 import { useState } from "react";
+
+import "./MainPanel.css";
 
 const defaultHeightState = {
     "value": "",
@@ -14,7 +16,7 @@ const defaultWeightState =
 }
 
 
-export default function CalculatePanel() {
+export default function MainPanel() {
 
     const [weightWithUnit, setWeight] = useState(defaultWeightState);
     const [heightWithUnit, setHeight] = useState(defaultHeightState);
@@ -44,12 +46,12 @@ export default function CalculatePanel() {
     }
 
     return (
-        <div>
-            <div>
+        <div id="main-panel">
+            <div id="calculate-panel">
                 <UnitInputPanel type="weight" onUnitChange={unitChanged} onValueChanged={valueChanged} unit={weightWithUnit.unit} value={weightWithUnit.value} />
                 <UnitInputPanel type="height" onUnitChange={unitChanged} onValueChanged={valueChanged} unit={heightWithUnit.unit} value={heightWithUnit.value} />
             </div>
             {isInputGiven && <ResultPanel heightWithUnit={heightWithUnit} weightWithUnit={weightWithUnit} />}
-        </div>
+        </div >
     );
 }

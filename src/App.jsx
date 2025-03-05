@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import './App.css'
-import CalculatePanel from './components/CalculatePanel'
+import MainPanel from './components/MainPanel/MainPanel'
 
 export default function App() {
   return (
-    <CalculatePanel />
+    <MainPanel />
   );
 }

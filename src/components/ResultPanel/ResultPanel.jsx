@@ -1,5 +1,7 @@
-import WeighChangePlanner from "./WeightChangePlanner";
-import { calculateBMI, convertToBMIUnits, howMuchToChangeWeight } from "../bmiOperations"
+import WeighChangePlanner from "../WeightChangePlanner/WeightChangePlanner";
+import { calculateBMI, convertToBMIUnits, howMuchToChangeWeight } from "../../bmiOperations"
+
+import "./ResultPanel.css";
 
 export default function ({ heightWithUnit, weightWithUnit }) {
 
@@ -21,12 +23,12 @@ export default function ({ heightWithUnit, weightWithUnit }) {
     }
 
     return (
-        <>
+        <div id="result-panel">
             < p > Your BMI is: {bmi} </p >
             {weightDifferenceContent}
             {!isWeightNormal && <WeighChangePlanner currentWeight={weight} weightDifference={weightDifference} />}
             {/* <BMIChart bmi={0} /> */}
-        </>
+        </div>
 
     );
 }
