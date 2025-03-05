@@ -90,12 +90,10 @@ export default function WeighChangePlanner({ currentWeight, weightDifference }) 
     }
 
     function handleDurationChange(event) {
-        console.log(event.target.value); // 1
         const newDuration = event.target.value;
         const newWeightChangeValue = parseFloat(Math.abs(weightDifference)) / parseFloat(newDuration);
 
         console.log(newWeightChangeValue);
-        console.log(parseFloat(Math.abs(weightDifference)))
         setWeightChangePerMonth(newWeightChangeValue);
     }
 
@@ -106,7 +104,7 @@ export default function WeighChangePlanner({ currentWeight, weightDifference }) 
                 onDurationChange={handleDurationChange}
                 onWeightChangeRateChange={handleWeightChangeRateChange}
                 duration={durationInMonths}
-                weight={weightChangePerMonth} />
+                weightChangeRate={weightChangePerMonth} />
             <WeighChangeChart />
         </div>
     )
