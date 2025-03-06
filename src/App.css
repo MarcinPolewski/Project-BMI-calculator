@@ -1,0 +1,7 @@
+.panel {
+    background-color: #1F7D53;
+    border: 1px solid rgb(31, 31, 31);
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}

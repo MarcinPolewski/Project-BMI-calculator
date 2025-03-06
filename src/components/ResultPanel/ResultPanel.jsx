@@ -9,22 +9,22 @@ export default function ({ heightWithUnit, weightWithUnit }) {
     let bmi = calculateBMI(weight, height);
     let weightDifference = howMuchToChangeWeight(weight, height);
 
-    let weightDifferenceContent;
+    let weightDifferenceContent = "Your BMI is: " + bmi + ". ";
     let isWeightNormal = false;
     if (weightDifference < 0) {
-        weightDifferenceContent = <p>You need to loose {-1 * weightDifference} kg </p>
+        weightDifferenceContent += "You need to loose " + (Math.abs(weightDifference)) + " kg"
     }
     else if (weightDifference > 0) {
-        weightDifferenceContent = <p>You need to gain {weightDifference}</p>
+        weightDifferenceContent += "You need to gain " + weightDifference + " kg";
     }
     else {
-        weightDifferenceContent = <p> Your weight is perfect, nothing to change </p>
+        weightDifferenceContent += "Your weight is perfect, nothing to change";
         isWeightNormal = true;
     }
 
     return (
-        <div id="result-panel">
-            < p > Your BMI is: {bmi} </p >
+        <div id="result-panel" className="panel">
+            <h2>Result</h2>
             {weightDifferenceContent}
             {!isWeightNormal && <WeighChangePlanner currentWeight={weight} weightDifference={weightDifference} />}
             {/* <BMIChart bmi={0} /> */}

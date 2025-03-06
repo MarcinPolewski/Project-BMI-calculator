@@ -100,12 +100,14 @@ export default function WeighChangePlanner({ currentWeight, weightDifference }) 
 
     return (
         <div>
+            <h3>Weight Change Calulator</h3>
+            <p>Use input fiels below to caluclate duration or weight change per month</p>
             <ParameterPanel
                 onDurationChange={handleDurationChange}
                 onWeightChangeRateChange={handleWeightChangeRateChange}
                 duration={durationInMonths}
                 weightChangeRate={weightChangePerMonth} />
-            <WeighChangeChart />
+            {/* <WeighChangeChart /> */}
         </div>
     )
 

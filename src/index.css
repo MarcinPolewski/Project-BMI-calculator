@@ -3,10 +3,28 @@ html {
     color: white;
 }
 
+* {
+    border-radius: 7px;
+
+}
+
 body {
     background: radial-gradient(circle at top,
-            #d3d3d3fa,
-            rgba(2, 2, 2, 0.87));
+            #27391C,
+            #18230F);
     background-repeat: repeat;
     background-size: 100% 100%;
+
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
