@@ -1,10 +1,11 @@
-import UnitInputPanel from "../UserInputPanel/UnitInputPanel"
+
 import ResultPanel from "../ResultPanel/ResultPanel"
 import { useState } from "react";
-import HeaderPanel from "../HeaderPanel/HeaderPanel"
 
 import "./MainPanel.css";
 import CalculatePanel from "../CalculatePanel/CalculatePanel";
+import HeaderPanel from "../HeaderPanel/HeaderPanel";
+
 
 const defaultHeightState = {
     "value": "",

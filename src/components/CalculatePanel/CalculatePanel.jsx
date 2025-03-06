@@ -1,3 +1,4 @@
+import UnitInputPanel from "../UserInputPanel/UnitInputPanel"
 export default function CalculatePanel({ unitChanged, valueChanged, weightWithUnit, heightWithUnit }) {
     return (
         <div id="calculate-panel" className="panel">
