@@ -7,7 +7,7 @@ It's a simple BMI calculator that detects when BMI is outside the optimal range 
 # Using 
 1. run "npm install" 
 2. run "npm run dev" 
-3. appropriate link will be pasted into console
+3. link to website will be displayed in console
 # Result
 ![start-screen-image](./project-photos/start-screen.png)
 ![normal-weight-image](./project-photos/normal-weight.png)
