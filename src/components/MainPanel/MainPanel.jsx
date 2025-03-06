@@ -1,8 +1,10 @@
 import UnitInputPanel from "../UserInputPanel/UnitInputPanel"
 import ResultPanel from "../ResultPanel/ResultPanel"
 import { useState } from "react";
+import HeaderPanel from "../HeaderPanel/HeaderPanel"
 
 import "./MainPanel.css";
+import CalculatePanel from "../CalculatePanel/CalculatePanel";
 
 const defaultHeightState = {
     "value": "",
@@ -47,15 +49,8 @@ export default function MainPanel() {
 
     return (
         <div id="main-panel">
-            <div id="header-panel" className="panel">
-                <h1 id="title">BMI Calculator</h1>
-                <p>Body Mass Index (BMI) is a numerical value calculated from a person’s weight and height to assess whether they are underweight, normal weight, overweight, or obese.</p>
-            </div>
-            <div id="calculate-panel" className="panel">
-                <h2>Provide your parameters</h2>
-                <UnitInputPanel type="weight" onUnitChange={unitChanged} onValueChanged={valueChanged} unit={weightWithUnit.unit} value={weightWithUnit.value} />
-                <UnitInputPanel type="height" onUnitChange={unitChanged} onValueChanged={valueChanged} unit={heightWithUnit.unit} value={heightWithUnit.value} />
-            </div>
+            <HeaderPanel />
+            <CalculatePanel unitChanged={unitChanged} valueChanged={valueChanged} weightWithUnit={weightWithUnit} heightWithUnit={heightWithUnit} />
             {isInputGiven && <ResultPanel heightWithUnit={heightWithUnit} weightWithUnit={weightWithUnit} />}
         </div >
     );
